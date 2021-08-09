@@ -1,0 +1,39 @@
+block content
+div
+a 
+  script(src="/js/jquery/dist/jquery.min.js")
+  link(rel='stylesheet' href='/stylesheets/style.css')
+body 
+table
+  thead
+    tr
+      th 文件地址 
+      th 配送
+      th 用户
+      th 地址
+      th 电话
+      th 页数
+      th 价格
+      th 状态
+      th 查看
+      th 编辑
+      th 删除
+  each item in orders 
+    tr(class="item-id-#{item._id}")
+      td #{item.filePath}  
+      td #{item.deliver}
+      td #{item.name}
+      td #{item.detailinfo}
+      td #{item.phone}
+      td #{item.papernum}
+      td #{item.price}
+      td #{item.stautes}
+      td: a(target="_blank" href="/order/#{item._id}")   查看
+      td: a(target="_blank" href="/orderreset/#{item._id}")  编辑
+      td
+        button.btn.btn-danger.del(type="button",data-id="#{item._id}") 删除
+          script(src="/js/admin.js")
+
+
+
+

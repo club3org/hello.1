@@ -1,0 +1,33 @@
+form(action='/ordersnew' method='POST')
+    input(type="hidden" name='_id' value='#{order._id}')
+    label(for="inputname") 用户名
+    input#inputname(type="text" name='name' value="#{order.name}")
+    label(for="inputname") 文件地址
+    input#inputfilePath(type="text" name="filePath" value="#{order.filePath}")
+    label(for="inputname") 配送方式
+    input#inputdilever(type="text" name="deliver" value="#{order.deliver}")
+    label(for="inputdeliver") 地址详情
+    input#inputdeliver(type="text" name="detailInfo" value="#{order.detailInfo}")
+    label(for="inputdetailInfo") 手机号码
+    input#inputdetailInfo(type="text" name="phone" value="#{order.phone}")
+    label(for="inputphone") 打印文件页数
+    input#inputphone(type="text" name="papernum" value="#{order.papernum}")
+    label(for="inputpapernum") 打印价格
+    input#inputpapernum(type="text" name="price" value="#{order.price}")
+    label(for="inputprice") 打印状态
+    input#inputprice(type="text" name="stautes" value="#{order.stautes}")
+    label(for="inputstautes") 份数
+    input#inputstautes(type="text" name="num" value="#{order.num}")
+    label(for="inputnum") 评论
+    input#inputnum(type="text" name="remark" value="#{order.remark}")
+    label(for="inputremark") 样式
+    input#inputremark(type="text" name="direction" value="#{order.direction}")
+    label(for="inputdirection") 颜色
+    input#inputdirection(type="text" name="color" value="#{order.color}")
+    label(for="inputcolor") 单双面
+    input#inputcolor(type="text" name="singleSide" value="#{order.singleSide}")
+    label(for="inputsingleSide") 城市名
+    input#inputsingleSide(type="text" name="cityName" value="#{order.cityName}")
+    label(for="inputcityName") 
+    label
+    button(type="submit") 录入 
