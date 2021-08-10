@@ -20,7 +20,7 @@ table
       th 删除
   each item in orders 
     tr(class="item-id-#{item._id}")
-      td #{item.filePath}  
+      td: a(target="_blank" href="/filedown/#{item.filename}")  下载
       td #{item.deliver}
       td #{item.name}
       td #{item.detailinfo}

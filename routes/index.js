@@ -44,6 +44,9 @@ router.get('/orderreset/:id', function(req, res, next) {
     }
     return
 })
+router.get('/filedown/:filename', function(req, res) {
+    res.download("public2/download" + req.params.filename)
+})
 router.post('/ordersnew', function(req, res) {
     var id = req.body._id
     var orderobj = req.body;
